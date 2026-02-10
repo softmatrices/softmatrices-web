@@ -43,20 +43,52 @@
   <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "ProfessionalService",
         "name": "Softmatrices",
+        "image": "https://softmatrices.com/images/logo.png",
         "url": "https://softmatrices.com",
-        "logo": "https://softmatrices.com/images/logo.png",
+        "telephone": "+91-9766476600",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Pune, Maharashtra",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411001",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.5204",
+          "longitude": "73.8567"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
         "sameAs": [
           "https://www.linkedin.com/company/softmatrices",
-          "https://twitter.com/softmatrices"
+          "https://twitter.com/softmatrices",
+          "https://www.facebook.com/softmatrices",
+          "https://www.instagram.com/softmatrices"
         ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-9766476600",
-          "contactType": "customer service",
-          "areaServed": "Global",
-          "availableLanguage": "English"
+        "description": "Softmatrices is a premier software development company offering custom app development, cloud solutions, and AI integration services.",
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "18.5204",
+            "longitude": "73.8567"
+          },
+          "geoRadius": "1000"
         }
       }
     </script>
