@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://softmatrices.com/sitemap.xml
