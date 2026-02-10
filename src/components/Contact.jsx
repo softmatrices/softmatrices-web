@@ -30,16 +30,27 @@ const Contact = () => {
         }
         setErrors({})
 
-        // Web3Forms Integration via Serverless Function
-        const endpoint = '/api/contact'
-        const payload = {
+        // Web3Forms Integration
+        const isDev = import.meta.env.DEV
+
+        let endpoint = '/api/contact'
+        let payload = {
             name: formData.name,
             email: formData.email,
             message: formData.message
         }
-        const headers = {
+        let headers = {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
+        }
+
+        // In Development, go directly to Web3Forms to avoid Vercel API 404s/500s
+        if (isDev) {
+            endpoint = 'https://api.web3forms.com/submit'
+            payload = {
+                ...payload,
+                access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+            }
         }
 
         try {
